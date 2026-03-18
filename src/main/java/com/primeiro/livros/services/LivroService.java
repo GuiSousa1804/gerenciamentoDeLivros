@@ -25,7 +25,7 @@ public class LivroService {
         livroRepository.deleteById(id);
     }
 
-    public void buscarPorId(Long id){
-        livroRepository.findById(id);
+    public LivroModel buscarPorId(Long id){
+        return livroRepository.findById(id).orElse(null);
     }
 }
